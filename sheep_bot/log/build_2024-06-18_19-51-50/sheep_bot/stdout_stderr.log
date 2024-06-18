@@ -1,0 +1,70 @@
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rosdev/ros2_ws/build/sheep_bot
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/ball_tracker_params_robot.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/ball_tracker_params_sim.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/drive_bot.rviz
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/empty.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/gaz_ros2_ctl_use_sim.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/gazebo_params.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/joystick.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/main.rviz
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/map.rviz
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/mapper_params_online_async.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/my_controllers.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/nav2_params.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/twist_mux.yaml
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/view_bot.rviz
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/camera.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/depth_camera.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/face.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/gazebo_control.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/inertial_macros.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/lidar.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/robot.urdf.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/robot_core.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/ros2_control.xacro
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/ball_tracker.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/camera.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/joystick.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/launch_robot.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/launch_sim.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/localization_launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/navigation_launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/online_async_launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/rplidar.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/rsp.launch.py
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/worlds/empty.world
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/worlds/obstacles.world
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/package_run_dependencies/sheep_bot
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/parent_prefix_path/sheep_bot
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/ament_prefix_path.sh
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/ament_prefix_path.dsv
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/path.sh
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/path.dsv
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.bash
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.sh
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.zsh
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.dsv
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/package.dsv
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/packages/sheep_bot
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/cmake/sheep_botConfig.cmake
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/cmake/sheep_botConfig-version.cmake
+-- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/package.xml

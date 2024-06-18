@@ -1,0 +1,76 @@
+[0.007s] Invoking command in '/home/rosdev/ros2_ws/build/sheep_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rosdev/ros2_ws -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rosdev/ros2_ws/install/sheep_bot
+[0.019s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.089s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.100s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.146s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.156s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.156s] -- Configured cppcheck include dirs: 
+[0.156s] -- Configured cppcheck exclude dirs and/or files: 
+[0.164s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.164s] -- Configured cpplint exclude dirs and/or files: 
+[0.165s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.168s] -- Added test 'lint_cmake' to check CMake code style
+[0.169s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.177s] -- Added test 'uncrustify' to check C / C++ code style
+[0.177s] -- Configured uncrustify additional arguments: 
+[0.178s] -- Added test 'xmllint' to check XML markup files
+[0.179s] -- Configuring done
+[0.182s] -- Generating done
+[0.183s] -- Build files have been written to: /home/rosdev/ros2_ws/build/sheep_bot
+[0.184s] Invoked command in '/home/rosdev/ros2_ws/build/sheep_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rosdev/ros2_ws -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rosdev/ros2_ws/install/sheep_bot
+[0.185s] Invoking command in '/home/rosdev/ros2_ws/build/sheep_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rosdev/ros2_ws/build/sheep_bot -- -j20 -l20
+[0.205s] Invoked command in '/home/rosdev/ros2_ws/build/sheep_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rosdev/ros2_ws/build/sheep_bot -- -j20 -l20
+[0.221s] Invoking command in '/home/rosdev/ros2_ws/build/sheep_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rosdev/ros2_ws/build/sheep_bot
+[0.225s] -- Install configuration: ""
+[0.225s] -- Execute custom install script
+[0.225s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/ball_tracker_params_robot.yaml
+[0.230s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/ball_tracker_params_sim.yaml
+[0.234s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/drive_bot.rviz
+[0.239s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/empty.yaml
+[0.243s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/gaz_ros2_ctl_use_sim.yaml
+[0.248s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/gazebo_params.yaml
+[0.252s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/joystick.yaml
+[0.256s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/main.rviz
+[0.261s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/map.rviz
+[0.265s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/mapper_params_online_async.yaml
+[0.269s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/my_controllers.yaml
+[0.273s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/nav2_params.yaml
+[0.277s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/twist_mux.yaml
+[0.282s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/config/view_bot.rviz
+[0.286s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/camera.xacro
+[0.290s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/depth_camera.xacro
+[0.294s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/face.xacro
+[0.298s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/gazebo_control.xacro
+[0.302s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/inertial_macros.xacro
+[0.306s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/lidar.xacro
+[0.310s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/robot.urdf.xacro
+[0.315s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/robot_core.xacro
+[0.319s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/description/ros2_control.xacro
+[0.324s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/ball_tracker.launch.py
+[0.328s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/camera.launch.py
+[0.332s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/joystick.launch.py
+[0.345s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/launch_robot.launch.py
+[0.349s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/launch_sim.launch.py
+[0.353s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/localization_launch.py
+[0.357s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/navigation_launch.py
+[0.361s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/online_async_launch.py
+[0.365s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/rplidar.launch.py
+[0.369s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/launch/rsp.launch.py
+[0.373s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/worlds/empty.world
+[0.377s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/worlds/obstacles.world
+[0.381s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/package_run_dependencies/sheep_bot
+[0.385s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/parent_prefix_path/sheep_bot
+[0.389s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/ament_prefix_path.sh
+[0.393s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/ament_prefix_path.dsv
+[0.397s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/path.sh
+[0.402s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/environment/path.dsv
+[0.406s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.bash
+[0.411s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.sh
+[0.415s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.zsh
+[0.419s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/local_setup.dsv
+[0.424s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/package.dsv
+[0.428s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/ament_index/resource_index/packages/sheep_bot
+[0.433s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/cmake/sheep_botConfig.cmake
+[0.437s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/cmake/sheep_botConfig-version.cmake
+[0.442s] -- Symlinking: /home/rosdev/ros2_ws/install/sheep_bot/share/sheep_bot/package.xml
+[0.457s] Invoked command in '/home/rosdev/ros2_ws/build/sheep_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rosdev/ros2_ws/build/sheep_bot

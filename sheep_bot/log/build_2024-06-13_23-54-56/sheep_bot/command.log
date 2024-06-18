@@ -1,0 +1,4 @@
+Invoking command in '/home/gabriel/dev/repos/sheep_bot/build/sheep_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gabriel/dev/repos/sheep_bot/build/sheep_bot -- -j20 -l20
+Invoked command in '/home/gabriel/dev/repos/sheep_bot/build/sheep_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gabriel/dev/repos/sheep_bot/build/sheep_bot -- -j20 -l20
+Invoking command in '/home/gabriel/dev/repos/sheep_bot/build/sheep_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gabriel/dev/repos/sheep_bot/build/sheep_bot
+Invoked command in '/home/gabriel/dev/repos/sheep_bot/build/sheep_bot' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gabriel/dev/repos/sheep_bot/build/sheep_bot
