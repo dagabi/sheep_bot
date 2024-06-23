@@ -13,8 +13,8 @@ RUN apt update -q \
     xauth \
     ros-dev-tools \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros-pkgs \
-    ros-humble-gazebo-ros2-control \
+#    ros-humble-gazebo-ros-pkgs \
+#    ros-humble-gazebo-ros2-control \
     ros-humble-xacro \
     ros-humble-joint-state-publisher-gui \
     ros-humble-joy \
@@ -22,6 +22,7 @@ RUN apt update -q \
     ros-humble-ros2-control \ 
     ros-humble-ros2-controllers \
     ros-humble-serial-driver \
+    ros-humble-twist-mux \	
     && apt clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -47,5 +48,5 @@ RUN echo 'source /opt/ros/'$ROS_DISTRO'/setup.bash' >> /home/$USERNAME/.bashrc \
 
 # Setup entrypoint
 COPY ./ros_entrypoint.sh /
-ENTRYPOINT ["/ros_entrypoint.sh"]
-CMD ["bash"]
+# ENTRYPOINT ["/ros_entrypoint.sh"]
+# CMD ["bash"]

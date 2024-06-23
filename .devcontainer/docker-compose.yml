@@ -1,0 +1,10 @@
+version: "3"
+services:
+  oh_my_sheep:
+    container_name: "oh_my_sheep_base"
+    image: "my_sheep"
+    tty: true
+    stdin_open: true
+    volumes:
+      - /home/sheep-jetson/ros_ws/sheep_bot:/home/rosdev/ros2_ws
+#ycommand: "bin/bash"
