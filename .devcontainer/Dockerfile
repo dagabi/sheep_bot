@@ -28,9 +28,10 @@ RUN apt update -q \
 
 # Create and switch to user
 RUN groupadd -g $GID $USERNAME \
-    && useradd -lm -u $UID -g $USERNAME -s /bin/bash $USERNAME \
-    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-RUN usermod -aG rdma $USERNAME
+&& useradd -lm -u $UID -g $USERNAME -s /bin/bash $USERNAME \
+&& echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#RUN usermod -aG rdma $USERNAME
+RUN usermod -aG dialout $USERNAME
 
 USER $USERNAME
 

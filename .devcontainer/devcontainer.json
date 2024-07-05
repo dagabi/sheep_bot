@@ -42,6 +42,7 @@
     "--privileged",
     "--network=host",
     "--runtime=nvidia",
-    "--device=/dev/input/js0:/dev/input/js0"
+    "--device=/dev/input/js0:/dev/input/js0",
+    "--device=/dev/ttyUSB0:/dev/ttyUSB0"
   ]
 }
