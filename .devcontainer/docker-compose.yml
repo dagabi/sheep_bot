@@ -2,9 +2,13 @@ version: "3"
 services:
   oh_my_sheep:
     container_name: "oh_my_sheep_base"
-    image: "my_sheep"
+    image: "sheep_bot"
+    privileged: true
+    network_mode: host
     tty: true
     stdin_open: true
     volumes:
       - /home/sheep-jetson/ros_ws/sheep_bot:/home/rosdev/ros2_ws
-#ycommand: "bin/bash"
+    devices:
+      - '/dev/ttyUSB0:/dev/ttyUSB0'
+    #command: 'ros2 launch sheep_bot launch_robot.launch.py'
