@@ -253,24 +253,20 @@ void setup() {
 #ifdef USE_BASE
   #ifdef ARDUINO_ENC_COUNTER
     //set as inputs
-    DDRD &= ~(1<<LEFT_ENC_PIN_A);
-    DDRD &= ~(1<<LEFT_ENC_PIN_B);
-    DDRC &= ~(1<<RIGHT_ENC_PIN_A);
-    DDRC &= ~(1<<RIGHT_ENC_PIN_B);
+    DDRB &= ~(1<<LEFT_ENC_PIN);
+    DDRK &= ~(1<<RIGHT_ENC_PIN);
     
-    //enable pull up resistors
-    PORTD |= (1<<LEFT_ENC_PIN_A);
-    PORTD |= (1<<LEFT_ENC_PIN_B);
-    PORTC |= (1<<RIGHT_ENC_PIN_A);
-    PORTC |= (1<<RIGHT_ENC_PIN_B);
+    //enable pull up resistor
+    PORTB |= (1<<LEFT_ENC_PIN);
+    PORTK |= (1<<RIGHT_ENC_PIN);
     
-    // tell pin change mask to listen to left encoder pins
-    PCMSK2 |= (1 << LEFT_ENC_PIN_A)|(1 << LEFT_ENC_PIN_B);
-    // tell pin change mask to listen to right encoder pins
-    PCMSK1 |= (1 << RIGHT_ENC_PIN_A)|(1 << RIGHT_ENC_PIN_B);
+    // tell pin change mask to listen to left encoder pin
+    PCMSK0 |= (1 << LEFT_ENC_PIN); 
+    // tell pin change mask to listen to right encoder pin
+    PCMSK2 |= (1 << RIGHT_ENC_PIN);
     
-    // enable PCINT1 and PCINT2 interrupt in the general interrupt mask
-    PCICR |= (1 << PCIE1) | (1 << PCIE2);
+    // enable PCINT0 and PCINT2 interrupt in the general interrupt mask
+    PCICR |= (1 << PCIE0) | (1 << PCIE2);
   #endif
   initMotorController();
   resetPID();
