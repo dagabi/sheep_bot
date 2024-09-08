@@ -41,7 +41,7 @@ class SimpleController(Node):
 
        self.get_logger().info(f"Wheel speed[1,0]: {wheel_speed[1,0]}, Wheel speed[0,0]: {wheel_speed[0,0]}")
        
-       self.serial_.write(f'o {int(wheel_speed[1, 0])} {int(wheel_speed[0, 0])}')
+       self.serial_.write(f'm {int(wheel_speed[1, 0])} {int(wheel_speed[0, 0])}\r\n'.encode('utf-8'))
 
        #wheel_speed_msg = Float64MultiArray()
        #wheel_speed_msg.data = [wheel_speed[1, 0], wheel_speed[0, 0]]
