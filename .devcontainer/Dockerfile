@@ -23,7 +23,8 @@ RUN apt update -q \
     ros-humble-ros2-controllers \
     ros-humble-serial-driver \
     ros-humble-twist-mux \
-    ros-humble-rplidar-ros \	
+    ros-humble-rplidar-ros \
+    ros-humble-teleop-twist-keyboard \	
     && apt clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
