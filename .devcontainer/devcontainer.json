@@ -1,6 +1,7 @@
 {
   "name": "ROS 2 Workspace humble-ros-base",
   "remoteUser": "rosdev",
+  "containerUser": "rosdev",
   "build": {
       "dockerfile": "Dockerfile",
       "args": {

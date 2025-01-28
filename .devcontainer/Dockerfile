@@ -1,4 +1,4 @@
-FROM ros:humble-ros-base
+FROM ros:jazzy-ros-base
 
 ARG USERNAME=rosdev
 ARG UID=1000
@@ -10,28 +10,41 @@ RUN apt update -q \
     && apt install -y \
     software-properties-common \
     python3-pip \
+    cargo \
+    clang \
+    git \
+    ros-jazzy-fastcdr \
     xauth \
     ros-dev-tools \
-    ros-humble-rviz2 \
-#    ros-humble-gazebo-ros-pkgs \
-#    ros-humble-gazebo-ros2-control \
-    ros-humble-xacro \
-    ros-humble-joint-state-publisher-gui \
-    ros-humble-joy \
-    ros-humble-joy-teleop \
-    ros-humble-ros2-control \ 
-    ros-humble-ros2-controllers \
-    ros-humble-serial-driver \
-    ros-humble-twist-mux \
-    ros-humble-rplidar-ros \
-    ros-humble-teleop-twist-keyboard \	
+    ros-jazzy-rviz2 \
+#    ros-jazzy-gazebo-ros-pkgs \
+#    ros-jazzy-gazebo-ros2-control \
+    ros-jazzy-xacro \
+    ros-jazzy-joint-state-publisher-gui \
+    ros-jazzy-joy \
+    ros-jazzy-joy-teleop \
+    ros-jazzy-ros2-control \ 
+    ros-jazzy-ros2-controllers \
+    ros-jazzy-serial-driver \
+    ros-jazzy-twist-mux \
+    ros-jazzy-rplidar-ros \
+    ros-jazzy-teleop-twist-keyboard \   
     && apt clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+
 # Create and switch to user
-RUN groupadd -g $GID $USERNAME \
-&& useradd -lm -u $UID -g $USERNAME -s /bin/bash $USERNAME \
-&& echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+# Check if GID exists; reuse it if it does, otherwise create the group
+RUN if getent group ${GID} >/dev/null; then \
+        groupname=$(getent group ${GID} | cut -d: -f1); \
+        useradd -m -u ${UID} -g ${groupname} -s /bin/bash ${USERNAME}; \
+    else \
+        groupadd -g ${GID} ${USERNAME} && \
+        useradd -m -u ${UID} -g ${GID} -s /bin/bash ${USERNAME}; \
+    fi && \
+    # Create the user and assign it to the group
+    useradd -m -u ${UID} -g ${GID} -s /bin/bash ${USERNAME} \
+    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 #RUN usermod -aG rdma $USERNAME
 RUN usermod -aG dialout $USERNAME
 
