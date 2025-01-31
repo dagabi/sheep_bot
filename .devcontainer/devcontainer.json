@@ -1,5 +1,5 @@
 {
-  "name": "ROS 2 Workspace humble-ros-base",
+  "name": "ROS 2 Workspace jazzy-ros-base",
   "remoteUser": "ubuntu",
   "containerUser": "ubuntu",
   "build": {
