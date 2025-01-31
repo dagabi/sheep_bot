@@ -8,7 +8,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - /home/sheep-jetson/ros_ws/sheep_bot:/home/rosdev/ros2_ws
+      - /home/sheep-jetson/ros_ws/sheep_bot:/home/ubuntu/ros2_ws
     devices:
       - '/dev/ttyUSB0:/dev/ttyUSB0'
     #command: 'ros2 launch sheep_bot launch_robot.launch.py'

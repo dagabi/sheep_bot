@@ -1,14 +1,16 @@
 FROM ros:jazzy-ros-base
 
-ARG USERNAME=rosdev
+ARG USERNAME=ubuntu
 ARG UID=1000
-ARG GID=$UID
+ARG GID=1000
 
 # Install some dependencies packages
 RUN apt update -q \
     && apt upgrade -q -y \
     && apt install -y \
     software-properties-common \
+    ros-jazzy-ament-cmake-vendor-package \
+    libboost-all-dev \
     python3-pip \
     cargo \
     clang \
@@ -35,18 +37,10 @@ RUN apt update -q \
 
 # Create and switch to user
 # Check if GID exists; reuse it if it does, otherwise create the group
-RUN if getent group ${GID} >/dev/null; then \
-        groupname=$(getent group ${GID} | cut -d: -f1); \
-        useradd -m -u ${UID} -g ${groupname} -s /bin/bash ${USERNAME}; \
-    else \
-        groupadd -g ${GID} ${USERNAME} && \
-        useradd -m -u ${UID} -g ${GID} -s /bin/bash ${USERNAME}; \
-    fi && \
-    # Create the user and assign it to the group
-    useradd -m -u ${UID} -g ${GID} -s /bin/bash ${USERNAME} \
-    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 #RUN usermod -aG rdma $USERNAME
 RUN usermod -aG dialout $USERNAME
+RUN echo 'root:20182018' | chpasswd
 
 USER $USERNAME
 
