@@ -1,14 +1,20 @@
 version: "3"
 services:
   oh_my_sheep:
-    container_name: "oh_my_sheep_base"
-    image: "sheep_bot"
+    container_name: "oh_my_sheep"
+    build: .
     privileged: true
     network_mode: host
     tty: true
     stdin_open: true
+    environment:
+      - DISPLAY
+      - QT_X11_NO_MITSHM:1
     volumes:
-      - /home/sheep-jetson/ros_ws/sheep_bot:/home/rosdev/ros2_ws
+      - ${HOME}/ros_ws/sheep_bot:/home/rosdev/ros2_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/input:/dev/input
     devices:
       - '/dev/ttyUSB0:/dev/ttyUSB0'
+      - /dev/input:/dev/input
     #command: 'ros2 launch sheep_bot launch_robot.launch.py'

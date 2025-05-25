@@ -13,8 +13,8 @@ RUN apt update -q \
     xauth \
     ros-dev-tools \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros-pkgs \
-    ros-humble-gazebo-ros2-control \
+#    ros-humble-gazebo-ros-pkgs \
+#    ros-humble-gazebo-ros2-control \
     ros-humble-xacro \
     ros-humble-joint-state-publisher-gui \
     ros-humble-joy \
@@ -26,7 +26,9 @@ RUN apt update -q \
     ros-humble-twist-mux \
     ros-humble-rplidar-ros \
     ros-humble-teleop-twist-keyboard \	
+    ros-humble-zed-ros2-wrapper \
     ros-humble-slam-toolbox \
+    wget \
     && apt clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -38,6 +40,18 @@ RUN groupadd -g $GID $USERNAME \
 RUN usermod -aG dialout $USERNAME
 
 USER $USERNAME
+
+# Download and install the ZED SDK (for Jetson)
+RUN wget -O ZED_SDK_JETSON.run https://download.stereolabs.com/zedsdk/4.0/l4t50/jetsons
+RUN chmod +x ZED_SDK_JETSON.run && ./ZED_SDK_JETSON.run -- silent
+
+
+# Set environment variables for ZED
+ENV LD_LIBRARY_PATH=/usr/local/zed/lib:$LD_LIBRARY_PATH
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=$CUDA_HOME/bin:$PATH
+ENV CUDNN_HOME=/usr/lib/x86_64-linux-gnu
+ENV PYTHONPATH=/usr/local/zed/python:$PYTHONPATH
 
 
 ENV NVIDIA_VISIBLE_DEVICES all
