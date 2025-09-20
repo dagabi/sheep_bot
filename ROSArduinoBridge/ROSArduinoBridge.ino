@@ -208,6 +208,8 @@ int runCommand() {
     break;
   case MOTOR_SPEEDS:
     /* Reset the auto stop timer */
+    setEncoderDir(LEFT, arg1 >= 0);
+    setEncoderDir(RIGHT, arg2 >= 0);
     lastMotorCommand = millis();
     if (arg1 == 0 && arg2 == 0) {
       setMotorSpeeds(0, 0);
@@ -220,6 +222,8 @@ int runCommand() {
     Serial.println("OK"); 
     break;
   case MOTOR_RAW_PWM:
+    setEncoderDir(LEFT, arg1 >= 0);
+    setEncoderDir(RIGHT, arg2 >= 0);
     /* Reset the auto stop timer */
     lastMotorCommand = millis();
     resetPID();

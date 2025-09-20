@@ -28,18 +28,20 @@
     else return encoders.XAxisReset();
   }
 #elif defined(ARDUINO_ENC_COUNTER)
+  volatile int8_t left_enc_dir = 1;
+  volatile int8_t right_enc_dir = 1;
   volatile long left_enc_pos = 0L;
   volatile long right_enc_pos = 0L;
   static const int8_t ENC_STATES [] = {0,1,-1,0,-1,0,0,1,1,0,0,-1,0,-1,1,0};  //encoder lookup table
     
   /* Interrupt routine for LEFT encoder, taking care of actual counting */
   ISR (PCINT0_vect){
-  	left_enc_pos += 1;
+  	left_enc_pos += left_enc_dir;
   }
   
   /* Interrupt routine for RIGHT encoder, taking care of actual counting */
   ISR (PCINT2_vect) {
-  	right_enc_pos += 1;
+  	right_enc_pos += right_enc_dir;
   }
   
   /* Wrap the encoder reading function */
@@ -56,6 +58,15 @@
     } else { 
       right_enc_pos=0L;
       return;
+    }
+  }
+
+  void setEncoderDir(int8_t motor, bool dir) {
+    if(motor == LEFT) {
+      left_enc_dir = dir ? 1 : -1;
+    }
+    else {
+      right_enc_dir = dir ? 1 : -1;
     }
   }
 #else
