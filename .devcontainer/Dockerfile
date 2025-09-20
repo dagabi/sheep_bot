@@ -4,6 +4,9 @@ ARG USERNAME=rosdev
 ARG UID=1000
 ARG GID=$UID
 
+RUN apt update -q; apt install curl
+RUN rm -f /usr/share/keyrings/ros2-latest-archive-keyring.gpg && curl https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros2-latest-archive-keyring.gpg
+
 # Install some dependencies packages
 RUN apt update -q \
     && apt upgrade -q -y \
@@ -11,10 +14,12 @@ RUN apt update -q \
     software-properties-common \
     python3-pip \
     xauth \
+    vim \
     ros-dev-tools \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros-pkgs \
-    ros-humble-gazebo-ros2-control \
+    ros-humble-ros-gz \
+    ros-humble-ros-gz-sim \
+    ros-humble-gz-ros2-control \
     ros-humble-xacro \
     ros-humble-joint-state-publisher-gui \
     ros-humble-joy \
@@ -24,6 +29,7 @@ RUN apt update -q \
     ros-humble-ros2-controllers \
     ros-humble-serial-driver \
     ros-humble-twist-mux \
+    ros-humble-twist-stamper \
     ros-humble-rplidar-ros \
     ros-humble-teleop-twist-keyboard \	
     ros-humble-slam-toolbox \

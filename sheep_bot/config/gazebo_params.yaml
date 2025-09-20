@@ -1,3 +1,4 @@
 gazebo:
   ros__parameters:
     publish_rate: 400.0
+    world: "/home/rosdev/ros2_ws/sheep_bot/worlds/gabriel.world"

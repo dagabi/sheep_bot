@@ -21,7 +21,7 @@ find_package(diffdrive_arduino REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-ament_python_install_package(${PROJECT_NAME})
+#ament_python_install_package(${PROJECT_NAME})
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -43,9 +43,9 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(PROGRAMS
-  ${PROJECT_NAME}/sheep_motor_driver.py
-  DESTINATION lib/${PROJECT_NAME}
-)
+#install(PROGRAMS
+#  ${PROJECT_NAME}/sheep_motor_driver.py
+#  DESTINATION lib/${PROJECT_NAME}
+#)
 
 ament_package()

@@ -17,4 +17,5 @@ services:
     devices:
       - '/dev/ttyUSB0:/dev/ttyUSB0'
       - /dev/input:/dev/input
+    runtime: nvidia
     #command: 'ros2 launch sheep_bot launch_robot.launch.py'
