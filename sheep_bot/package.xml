@@ -13,6 +13,9 @@
   <depend>rclpy</depend>
   <depend>pyserial</depend>
   <depend>geometry_msgs</depend>
+  <test_depend>ros_gz_bridge</test_depend>
+  <test_depend>ros_gz_image</test_depend>
+  <test_depend>ros_gz_sim</test_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
